@@ -9,7 +9,7 @@ const allNewsCategory = async()=>{
      data.slice(0,5).forEach(newsCategory => {
         const div = document.createElement ('div');
         div.innerHTML =`
-        <a class="tab text-lg" onclick="handelLoadNews('${newsCategory.category_id}')" >${newsCategory.category_name} News</a> 
+        <a class="tab text-lg" onclick="handelLoadNews('${newsCategory.category_id}')" >${newsCategory.category_name}</a> 
         `;
         allNewsCategoryId.appendChild(div);
     });
@@ -100,4 +100,5 @@ const handelModal =async(modalId)=>{
 };
 
 allNewsCategory();
-handelLoadNews(categoryId="01");
+// handelLoadNews(categoryId="01");
+handelLoadNews();
